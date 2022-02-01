@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 // create our User model
 class User extends Model {}
 
-// define table columns and configuration
+// Defining the user table and it's attributes
 User.init(
   {
     id: {
@@ -34,7 +34,6 @@ User.init(
     }
   },
   {
-    // the direct connection to our database
     sequelize,
     timestamps: false,
     freezeTableName: true,
