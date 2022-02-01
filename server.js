@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Call route files
+// Calls route files to shorten API routes
 app.use(routes);
 
 // calls connection file sets port to listening
