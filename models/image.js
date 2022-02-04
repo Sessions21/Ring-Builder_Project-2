@@ -2,10 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Ring model
-class Band extends Model {}
+class Image extends Model {}
 
 // Defining the Ring table and it's attributes
-Band.init(
+Image.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,34 +13,34 @@ Band.init(
       primaryKey: true,
       autoIncrement: true
     },
-    metal: {
+    image: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    size: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    add_on: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    user_id: {
+    band_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'user',
+        model: 'band',
         key: 'id'
       }
     },
-    image_id: {
+    stone_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'image',
+        model: 'stone',
         key: 'id'
       }
-    }
+    },
+    stone_band_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'stone_band',
+        key: 'id'
+      }
+    },
   },
   {
     sequelize,
@@ -51,4 +51,4 @@ Band.init(
   }
 );
 
-module.exports = Band;
+module.exports = Image;
