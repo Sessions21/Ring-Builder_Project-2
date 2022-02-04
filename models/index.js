@@ -1,7 +1,7 @@
 const User = require('./User');
 const Band = require('./Band');
 const Stone = require('./Stone');
-const Image = require('./image');
+const Image = require('./Image');
 
 Stone.belongsToMany(Band, {
   foreignKey: 'stone_id',
@@ -34,6 +34,10 @@ User.hasMany(Band, {
 })
 
 User.hasMany(Stone, {
+  foreignKey: 'user_id'
+})
+
+User.hasMany(Image, {
   foreignKey: 'user_id'
 })
 
