@@ -1,0 +1,35 @@
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+    Edit Ring
+  </h2>
+  <form class="edit-ring-form">
+    <div>
+      <input name="ring" type="text" value="{{ring}}" />
+      <span>({{format_url ring.display}})</span>
+    </div>
+    <div>
+    {{!-- Need to figure out how to display image for selection --}} created by you on {{format_date ring.created_at}}
+      |
+      <a href="/ring/{{ring.id}}">{{ring.selection.length}} {{format_plural "note" ring.selection.length}}</a>
+    </div>
+    <button type="submit">Save Ring</button>
+    <button type="button" class="delete-ring-btn">Delete Ring</button>
+  </form>
+</article>
+
+<form class="ring-form">
+  <div>
+    <textarea name="ring-description"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add Notes</button>
+  </div>
+</form>
+
+{{> selections ring.selections}}
+
+<script src="/javascript/edit-ring.js"></script>
+<script src="/javascript/delete-ring.js"></script>
+<script src="/javascript/selection.js"></script>
