@@ -15,18 +15,22 @@ Band.belongsToMany(Stone, {
 
 Image.belongsTo(Stone, {
   foreignKey: 'image_id',
+  through: 'stone'
 })
 
 Image.belongsTo(Band, {
   foreignKey: 'image_id',
+  through: 'band'
 })
 
 Stone.belongsTo(Image, {
-  foreignKey: 'stone_id'
+  foreignKey: 'stone_id',
+  through: 'image'
 })
 
 Band.belongsTo(Image, {
-  foreignKey: 'band_id'
+  foreignKey: 'band_id',
+  through: 'image'
 })
 
 User.hasMany(Band, {
@@ -37,8 +41,5 @@ User.hasMany(Stone, {
   foreignKey: 'user_id'
 })
 
-User.hasMany(Image, {
-  foreignKey: 'user_id'
-})
 
 module.exports = { User, Band, Stone, Image };
