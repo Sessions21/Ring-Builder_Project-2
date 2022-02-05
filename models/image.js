@@ -7,18 +7,13 @@ class Image extends Model {}
 // Defining the Ring table and it's attributes
 Image.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
     image: {
       type: DataTypes.STRING,
       allowNull: false
     },
     band_id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       allowNull: true,
       references: {
         model: 'band',
@@ -27,27 +22,20 @@ Image.init(
     },
     stone_id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       allowNull: true,
       references: {
         model: 'stone',
         key: 'id'
       }
-    },
-    stone_band_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'stone_band',
-        key: 'id'
-      }
-    },
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'band'
+    modelName: 'image'
   }
 );
 
