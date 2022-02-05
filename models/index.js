@@ -1,7 +1,7 @@
 const User = require('./User');
 const Band = require('./Band');
 const Stone = require('./Stone');
-// const Image = require('./Image');
+const Image = require('./Image');
 const Ring = require('./Ring');
 
 User.hasMany(Ring, {
@@ -28,4 +28,4 @@ Stone.hasMany(Ring, {
   foreignKey: 'stone_id'
 });
 
-module.exports = { User, Band, Stone, Ring };
+module.exports = { User, Band, Stone, Ring, Image };
