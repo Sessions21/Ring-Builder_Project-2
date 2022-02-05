@@ -17,10 +17,6 @@ Band.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    size: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
   },
   {
     sequelize,

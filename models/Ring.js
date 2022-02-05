@@ -20,6 +20,10 @@ Ring.init(
         key: 'id'
       }
     },
+    size: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     band_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
@@ -28,14 +32,14 @@ Ring.init(
         key: 'id'
       }
     },
-    // stone_id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    //   references: {
-    //     model: 'stone',
-    //     key: 'id'
-    //   }
-    // },
+    stone_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'stone',
+        key: 'id'
+      }
+    },
   },
   {
     sequelize,
