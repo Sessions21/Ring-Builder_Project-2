@@ -16,27 +16,7 @@ Stone.init(
     type: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    shape: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
-    },
-    image_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'image',
-        key: 'id'
-      }
-    },
+    }
   },
   {
     sequelize,

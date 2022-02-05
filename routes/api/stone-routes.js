@@ -35,9 +35,6 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
  Stone.create({
     type: req.body.type,
-    shape: req.body.shape,
-    user_id: req.body.user_id,
-    ring_id: req.body.ring_id
   })
     .then(userInput => res.json(userInput))
     .catch(err => {

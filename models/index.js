@@ -1,45 +1,31 @@
 const User = require('./User');
 const Band = require('./Band');
 const Stone = require('./Stone');
-const Image = require('./Image');
+// const Image = require('./Image');
+const Ring = require('./Ring');
 
-Stone.belongsToMany(Band, {
-  foreignKey: 'stone_id',
-  through: 'stone_band'
-})
-
-Band.belongsToMany(Stone, {
-  foreignKey: 'band_id',
-  through: 'stone_band'
-})
-
-Image.belongsTo(Stone, {
-  foreignKey: 'image_id',
-  through: 'stone'
-})
-
-Image.belongsTo(Band, {
-  foreignKey: 'image_id',
-  through: 'band'
-})
-
-Stone.belongsTo(Image, {
-  foreignKey: 'stone_id',
-  through: 'image'
-})
-
-Band.belongsTo(Image, {
-  foreignKey: 'band_id',
-  through: 'image'
-})
-
-User.hasMany(Band, {
+User.hasMany(Ring, {
   foreignKey: 'user_id'
-})
+});
 
-User.hasMany(Stone, {
+Ring.belongsTo(User, {
   foreignKey: 'user_id'
-})
+});
 
+Ring.belongsTo(Stone, {
+  foreignKey: 'stone_id'
+});
 
-module.exports = { User, Band, Stone, Image };
+Band.hasMany(Ring,{
+  foreignKey: 'band_id'
+});
+
+Ring.belongsTo(Band, {
+  foreignKey: 'band_id'
+});
+
+Stone.hasMany(Ring, {
+  foreignKey: 'stone_id'
+});
+
+module.exports = { User, Band, Stone, Ring };
