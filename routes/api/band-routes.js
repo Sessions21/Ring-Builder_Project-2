@@ -35,7 +35,6 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   Band.create({
     metal: req.body.metal,
-    size: req.body.size,
   })
     .then(userInput => res.json(userInput))
     .catch(err => {

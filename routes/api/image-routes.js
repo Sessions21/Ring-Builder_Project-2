@@ -37,7 +37,6 @@ router.post('/', (req, res) => {
     image: req.body.image,
     band_id: req.body.band_id,
     stone_id: req.body.stone_id,
-    stone_band_id: req.body.stone_id
   })
     .then(userInput => res.json(userInput))
     .catch(err => {

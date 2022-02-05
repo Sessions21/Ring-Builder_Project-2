@@ -35,7 +35,9 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   Ring.create({
     user_id: req.body.user_id,
+    size: req.body.size,
     band_id: req.body.band_id,
+    stone_id: req.body.stone_id,
   })
     .then(userInput => res.json(userInput))
     .catch(err => {
