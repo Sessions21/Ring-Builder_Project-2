@@ -1,29 +1,29 @@
 const router = require('express').Router();
-const { Ring } = require('../../models');
+const { Image } = require('../../models');
 
-// GET /api/rings
+// GET /api/images
 router.get('/', (req, res) => {
-  Ring.findAll()
-    .then(allRings => res.json(allRings))
+  Image.findAll()
+    .then(allImages => res.json(allImages))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-// GET /api/rings/:
+// GET /api/images/:
 router.get('/:id', (req, res) => {
-  Ring.findOne({
+  Image.findOne({
     where: {
       id: req.params.id
     }
   })
-    .then(oneRing => {
-      if (!oneRing) {
-        res.status(404).json({ message: 'No ring found with this id' });
+    .then(oneImage => {
+      if (!oneImage) {
+        res.status(404).json({ message: 'No image found with this id' });
         return;
       }
-      res.json(oneRing);
+      res.json(oneImage);
     })
     .catch(err => {
       console.log(err);
@@ -31,11 +31,10 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// POST /api/rings
+// POST /api/images
 router.post('/', (req, res) => {
-  Ring.create({
-    user_id: req.body.user_id,
-    size: req.body.size,
+  Image.create({
+    image: req.body.image,
     band_id: req.body.band_id,
     stone_id: req.body.stone_id,
   })
@@ -46,16 +45,16 @@ router.post('/', (req, res) => {
     });
 });
 
-// PUT /api/rings/:
+// PUT /api/images/:
 router.put('/:id', (req, res) => {
-  Ring.update(req.body, {
+  Image.update(req.body, {
     where: {
       id: req.params.id
     }
   })
     .then(userInput => {
       if (!userInput[0]) {
-        res.status(404).json({ message: 'No ring found with this id' });
+        res.status(404).json({ message: 'No image found with this id' });
         return;
       }
       res.json(userInput);
@@ -68,14 +67,14 @@ router.put('/:id', (req, res) => {
 
 // DELETE /api/rings/:
 router.delete('/:id', (req, res) => {
-  Ring.destroy({
+  Image.destroy({
     where: {
       id: req.params.id
     }
   })
     .then(userData => {
       if (!userData) {
-        res.status(404).json({ message: 'No ring found with this id' });
+        res.status(404).json({ message: 'No image found with this id' });
         return;
       }
       res.json(userData);

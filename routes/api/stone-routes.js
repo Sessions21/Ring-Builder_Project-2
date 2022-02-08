@@ -1,29 +1,29 @@
 const router = require('express').Router();
-const { Ring } = require('../../models');
+const { Stone } = require('../../models');
 
-// GET /api/rings
+// GET /api/stones
 router.get('/', (req, res) => {
-  Ring.findAll()
-    .then(allRings => res.json(allRings))
+ Stone.findAll()
+    .then(allStones => res.json(allStones))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-// GET /api/rings/:
+// GET /api/stones/:
 router.get('/:id', (req, res) => {
-  Ring.findOne({
+ Stone.findOne({
     where: {
       id: req.params.id
     }
   })
-    .then(oneRing => {
-      if (!oneRing) {
-        res.status(404).json({ message: 'No ring found with this id' });
+    .then(oneStone => {
+      if (!oneStone) {
+        res.status(404).json({ message: 'No stone found with this id' });
         return;
       }
-      res.json(oneRing);
+      res.json(oneStone);
     })
     .catch(err => {
       console.log(err);
@@ -31,13 +31,10 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// POST /api/rings
+// POST /api/stones
 router.post('/', (req, res) => {
-  Ring.create({
-    user_id: req.body.user_id,
-    size: req.body.size,
-    band_id: req.body.band_id,
-    stone_id: req.body.stone_id,
+ Stone.create({
+    type: req.body.type,
   })
     .then(userInput => res.json(userInput))
     .catch(err => {
@@ -46,16 +43,16 @@ router.post('/', (req, res) => {
     });
 });
 
-// PUT /api/rings/:
+// PUT /api/stones/:
 router.put('/:id', (req, res) => {
-  Ring.update(req.body, {
+ Stone.update(req.body, {
     where: {
       id: req.params.id
     }
   })
     .then(userInput => {
       if (!userInput[0]) {
-        res.status(404).json({ message: 'No ring found with this id' });
+        res.status(404).json({ message: 'No stone found with this id' });
         return;
       }
       res.json(userInput);
@@ -66,16 +63,16 @@ router.put('/:id', (req, res) => {
     });
 });
 
-// DELETE /api/rings/:
+// DELETE /api/stones/:
 router.delete('/:id', (req, res) => {
-  Ring.destroy({
+ Stone.destroy({
     where: {
       id: req.params.id
     }
   })
     .then(userData => {
       if (!userData) {
-        res.status(404).json({ message: 'No ring found with this id' });
+        res.status(404).json({ message: 'No stone found with this id' });
         return;
       }
       res.json(userData);
