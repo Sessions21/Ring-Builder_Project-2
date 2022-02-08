@@ -1,0 +1,11 @@
+<article class="ring">
+  <div class="rings">
+    <a href="{{display}}" target="_blank">{{ring}}</a>
+    <span>({{format_url display}})</span>
+  </div>
+  <div class="meta">
+    {{!-- Ring rendered with usernane of creator and date of creation--}} by {{user.username}} on {{format_date created_at}}
+    |
+    <a href="/ring/{{id}}" src="">{{!--ring image needs to display here--}}</a>
+  </div>
+</article>
