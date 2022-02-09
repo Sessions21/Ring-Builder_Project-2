@@ -22,7 +22,6 @@ Ring.init(
     },
     size: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
     band_id: {
       type: DataTypes.INTEGER,
