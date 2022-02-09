@@ -20,12 +20,16 @@ Ring.init(
         key: 'id'
       }
     },
+    title: {
+      type: DataTypes.CHAR,
+      allowNull: false
+    },
     size: {
       type: DataTypes.INTEGER,
     },
     band_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
         model: 'band',
         key: 'id'
@@ -33,7 +37,7 @@ Ring.init(
     },
     stone_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
         model: 'stone',
         key: 'id'
