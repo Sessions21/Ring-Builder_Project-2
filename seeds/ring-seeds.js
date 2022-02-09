@@ -1,52 +1,43 @@
 const { Ring } = require('../models');
+// need to remove Image: 5 with the image links
 
 const ringData = [{
         title: 'Black Onyx Gold',
-        Image: 5,
-        ring_id: 1
+        Image: 5
 
     },
     {
         title: 'Black Onyx Silver',
-        Image: 5,
-        ring_id: 2
+        Image: 5
     },
     {
         title: 'Black Onyx Decorative',
-        Image: 5,
-        ring_id: 3
+        Image: 5
     },
 
     {
     title: 'Rainbow Moonstone Gold',
-    Image: 5,
-    ring_id: 4
-
+    Image: 5
     },
     {
     title: 'Rainbow Moonstone Silver',
-    Image: 5,
-    ring_id: 5
+    Image: 5
     },
     {
     title: 'Rainbow Moonstone Decorative',
-    Image: 5,
-    ring_id: 6
+    Image: 5
     },
     {
     title: 'Turquoise Gold',
-    Image: 5,
-    ring_id: 7
+    Image: 5
     },
     {
     title: 'Turquoise Silver',
-    Image: 5,
-    ring_id: 8
+    Image: 5
     },
     {
     title: 'Turquoise Decorative',
-    Image: 5,
-    ring_id: 9
+    Image: 5
     }
 
 ];
