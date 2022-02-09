@@ -2,14 +2,14 @@ const router = require('express').Router();
 const { Ring } = require('../../models');
 
 // GET /api/rings
-router.get('/', (req, res) => {
+router.get('/', (req, res) =>
   Ring.findAll()
-    .then(allRings => res.json(allRings))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+    .then(allRings => {
+      res.render('dashboard', {
+        allRings
+      })
+    })
+    .catch(err => console.log(er)));
 
 // GET /api/rings/:
 router.get('/:id', (req, res) => {
@@ -23,7 +23,8 @@ router.get('/:id', (req, res) => {
         res.status(404).json({ message: 'No ring found with this id' });
         return;
       }
-      res.json(oneRing);
+      res.render('ring-info', {
+        oneRing
     })
     .catch(err => {
       console.log(err);
