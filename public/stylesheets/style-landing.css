@@ -52,11 +52,14 @@
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
+  color: white;
 }
 
 .logo {
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .nav {
