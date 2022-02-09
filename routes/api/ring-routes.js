@@ -26,6 +26,7 @@ router.get('/:id', (req, res) => {
       res.render('ring-info', {
         oneRing
     })
+  })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -87,4 +88,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = router
