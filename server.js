@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const path = require('path');
+const res = require('express/lib/response');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,7 +15,7 @@ app.set('view engine', 'handlebars');
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.get('/', (req, res) => res.send('INDEX'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

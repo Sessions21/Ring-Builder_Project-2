@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="./public/stylesheets/style-landing.css">
+  <link rel="stylesheet" href="/stylesheets/style-landing.css">
 </head>
 <body>
   <section class="showcase">
     <header>
       <div class="brand">
-        <img class="logo-icon" src="./public/images/logo.png" alt="octopus logo"></img>
-        <h2 class="logo">Bella Ruby Jewelry</h2>
+        <a href="/"><img class="logo-icon" src="/images/logo.png" alt="octopus logo"></img></a>
+        <h2 class="logo"><a href="/">Bella Ruby Jewelry</a></h2>
       </div>
       <div class="nav">
         <h3>Menu</h3>
@@ -24,14 +24,14 @@
       </div>
     </header>
 
-    <img class="background" src="./public/images/landing-video_Moment.jpg"></img>
+    <img class="background" src="/images/landing-video_Moment.jpg"></img>
 
     <div class="overlay"></div>
 
     <div class="text">
       <h2>Ring Builder</h2>
       <h3>Custom jewelry pieces. Designed by you.</h3>
-      <a href="#">Start Building!</a>
+      <a href="/dashboard">Start Building!</a>
     </div>
 
     <ul class="social">
@@ -45,11 +45,12 @@
 
   <div class="menu">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Register</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">My Collection</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/login">Register</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="#">Create a Ring</a></li>
+      <li><a href="/rings">My Collection</a></li>
+      <li><a href="mailto:lissdiaz@gmail.com" class="">Contact Us</a></li>
     </ul>
   </div>
 

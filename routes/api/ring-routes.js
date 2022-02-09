@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/rings
-router.post('/', (req, res) => {
+router.post('/add', (req, res) => {
   Ring.create({
     user_id: req.body.user_id,
     size: req.body.size,
@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/rings/:
-router.put('/:id', (req, res) => {
+router.put('/add/:id', (req, res) => {
   Ring.update(req.body, {
     where: {
       id: req.params.id
