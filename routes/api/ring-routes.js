@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Ring } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET /api/rings
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   Ring.findAll()
     .then(allRings => res.json(allRings))
     .catch(err => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/rings/:
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Ring.findOne({
     where: {
       id: req.params.id
@@ -33,7 +34,7 @@ router.get('/:id', (req, res) => {
 })
 
 // POST /api/rings
-router.post('/add', (req, res) => {
+router.post('/add', withAuth, (req, res) => {
   Ring.create({
     user_id: req.body.user_id,
     size: req.body.size,
