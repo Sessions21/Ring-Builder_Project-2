@@ -15,7 +15,9 @@ app.set('view engine', 'handlebars');
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => res.send('INDEX'))
+// Landing Page Rendering Path
+app.get('/landing', (req, res) => res.render('start-building', { layout: 'landing'}));
+app.get('/main', (req, res) => res.render('start-building', { layout: 'main'}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
