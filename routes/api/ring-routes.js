@@ -31,6 +31,7 @@ router.get('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+})
 
 // POST /api/rings
 router.post('/add', (req, res) => {
@@ -49,16 +50,15 @@ router.post('/add', (req, res) => {
 
 // PUT /api/rings/:
 router.put('/add/:id', (req, res) => {
-  Ring.update(req.body, {
+  Ring.update({
     where: {
-      id: req.params.id
+      user_id: req.body.user_id,
+      size: req.body.size,
+      band_id: req.body.band_id,
+      stone_id: req.body.stone_id,
     }
   })
     .then(userInput => {
-      if (!userInput[0]) {
-        res.status(404).json({ message: 'No ring found with this id' });
-        return;
-      }
       res.json(userInput);
     })
     .catch(err => {
@@ -75,10 +75,6 @@ router.delete('/:id', (req, res) => {
     }
   })
     .then(userData => {
-      if (!userData) {
-        res.status(404).json({ message: 'No ring found with this id' });
-        return;
-      }
       res.json(userData);
     })
     .catch(err => {
