@@ -1,3 +1,4 @@
+const { defaultMaxListeners } = require('mysql2/typings/mysql/lib/Connection');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -31,8 +32,15 @@ User.init(
       validate: {
         len: [4]
       }
-    }
-  },
+    },
+    phone: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [10]
+      }
+  }
+},
   {
     sequelize,
     timestamps: false,
