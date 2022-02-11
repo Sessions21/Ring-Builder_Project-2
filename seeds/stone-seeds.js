@@ -1,8 +1,7 @@
 const { Stone } = require('../models');
 
 const stoneData = [{
-        type: 'Black Onyx',
-
+        type: 'Black Onyx'
     },
     {
         type: 'Rainbow Moonstone'
@@ -10,7 +9,6 @@ const stoneData = [{
     {
         type: 'Turqoise'
     }
-
 ];
 
 const seedStones = () => Stone.bulkCreate(stoneData);
