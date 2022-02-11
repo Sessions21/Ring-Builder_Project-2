@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Stone } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET /api/stones
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
  Stone.findAll()
     .then(allStones => res.json(allStones))
     .catch(err => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/stones/:
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
  Stone.findOne({
     where: {
       id: req.params.id
@@ -32,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/stones
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
  Stone.create({
     type: req.body.type,
   })
@@ -44,7 +45,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/stones/:
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
  Stone.update(req.body, {
     where: {
       id: req.params.id
@@ -64,7 +65,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE /api/stones/:
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
  Stone.destroy({
     where: {
       id: req.params.id

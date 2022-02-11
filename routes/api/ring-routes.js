@@ -48,7 +48,7 @@ router.post('/add', withAuth, (req, res) => {
 });
 
 // PUT /api/rings/:
-router.put('/add/:id', (req, res) => {
+router.put('/add/:id', withAuth, (req, res) => {
   Ring.update(req.body, {
     where: {
       id: req.params.id
@@ -68,7 +68,7 @@ router.put('/add/:id', (req, res) => {
 });
 
 // DELETE /api/rings/:
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Ring.destroy({
     where: {
       id: req.params.id

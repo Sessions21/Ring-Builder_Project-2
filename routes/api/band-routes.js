@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Band } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET /api/bands
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   Band.findAll()
     .then(allBands => res.json(allBands))
     .catch(err => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/bands/:
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Band.findOne({
     where: {
       id: req.params.id
@@ -32,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/bands
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Band.create({
     metal: req.body.metal,
   })
@@ -44,7 +45,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/bands/:
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Band.update(req.body, {
     where: {
       id: req.params.id
@@ -64,7 +65,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE /api/bands/:
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Band.destroy({
     where: {
       id: req.params.id

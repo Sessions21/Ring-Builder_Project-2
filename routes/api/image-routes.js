@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Image } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET /api/images
-router.get('/', (req, res) => {
+router.get('/', withAuth,(req, res) => {
   Image.findAll()
     .then(allImages => res.json(allImages))
     .catch(err => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/images/:
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Image.findOne({
     where: {
       id: req.params.id
@@ -32,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/images
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Image.create({
     image: req.body.image,
     band_id: req.body.band_id,
@@ -46,7 +47,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/images/:
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Image.update(req.body, {
     where: {
       id: req.params.id
@@ -66,7 +67,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE /api/rings/:
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Image.destroy({
     where: {
       id: req.params.id
