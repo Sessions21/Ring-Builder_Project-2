@@ -11,7 +11,7 @@
     <div>
     {{!-- Need to figure out how to display image for selection --}} created by you on {{format_date ring.created_at}}
       |
-      <a href="/ring/{{ring.id}}">{{ring.selection.length}} {{format_plural "note" ring.selection.length}}</a>
+      <a href="/rings/{{ring.id}}">{{ring.selection.length}} {{format_plural "note" ring.selection.length}}</a>
     </div>
     <button type="submit">Save Ring</button>
     <button type="button" class="delete-ring-btn">Delete Ring</button>

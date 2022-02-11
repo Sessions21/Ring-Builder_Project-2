@@ -15,9 +15,10 @@ app.set('view engine', 'handlebars');
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Landing Page Rendering Path
+// Page Rendering Paths for style testing
 app.get('/landing', (req, res) => res.render('start-building', { layout: 'landing'}));
-app.get('/main', (req, res) => res.render('start-building', { layout: 'main'}));
+app.get('/main', (req, res) => res.render('start-building', { style: 'style-main.css'}));
+app.get('/login', (req, res) => res.render('login', { style: 'style-login.css'}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 // Calls route files to shorten API routes
 app.use(routes);
 
-// calls connection file sets port to listening
-sequelize.sync({ force: true }).then(() => {
+// calls connection module and sets port to listening
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now connected to port ${PORT}!`));
 });

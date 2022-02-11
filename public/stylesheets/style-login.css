@@ -7,6 +7,11 @@
   font-family: 'El Messiri', sans-serif;
 }
 
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .showcase {
   position: absolute;
   right: 0;
@@ -38,6 +43,11 @@
   justify-content: left;
 }
 
+.brand {
+  display: flex;
+  justify-content: left;
+}
+
 
 .logo-icon {
   position: relative;
@@ -56,12 +66,46 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .logo:hover {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+}
+
+.button {
+  background-color: grey;
+  border-color: white;
+  margin-top: 10px;
+  font-size: 1.7em;
+  border-radius: 2px;
+}
+
+label {
+  font-size: 23px;
+}
+
+input[type=text], input[type=tel], input[type=password]  {
+  width: 100%;
+  color: black;
+  font-size: 2em;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus {
+  border: 3px solid rgb(85, 2, 2);
+}
+
+.login-form input {
+  background-color: white;
+  border-color: grey;
+  border-radius: 2px;
+}
+
+.signup-form input {
+  background-color: white;
+  border-color: grey;
+  border-radius: 2px;
 }
 
 .nav {
@@ -76,6 +120,7 @@
   color: white;
   margin-left: 8px;
   margin-right: 8px;
+  font-size: 20px;
 }
 
 .nav h3 {
@@ -84,7 +129,7 @@
 }
 
 #logout {
-  font-weight: bold;
+  font-size: 20px;
 }
 
 .background{
@@ -94,7 +139,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .social {
@@ -108,6 +153,7 @@
 
 .social li {
   list-style: none;
+  font-size: 15px;
 }
 
 .social li a {
@@ -125,5 +171,19 @@
   .showcase,
   .showcase header {
     padding: 40px;
+  }
+  .logo {
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+
+  .nav a {
+    color: white;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 15px;
   }
 }
