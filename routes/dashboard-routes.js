@@ -10,26 +10,24 @@ router.get('/', withAuth, (req, res) => {
   Ring.findAll({
     where: {
       user_id: req.session.user_id
-    },
-    attributes: [
-      'id'
-      [sequelize.literal('(SELECT METAL(*) FROM band WHERE ring.id = band.ring_id)'),
-      ('(SELECT TYPE(*) FROM stone WHERE ring.id = stone.ring_id)')]
-    ],
-    include: [
-      {
-        model: Image,
-        attributes: ['image'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    }
+    // attributes: [
+    //   'id'
+    // ],
+    // // include: [
+    // //   {
+    // //     model: Image,
+    // //     attributes: ['image'],
+    // //     include: {
+    // //       model: User,
+    // //       attributes: ['username']
+    // //     }
+    // //   },
+    // //   {
+    // //     model: User,
+    // //     attributes: ['username']
+    // //   }
+    // // ]
   })
     .then(dbRingData => {
       const rings = dbRingData.map(ring => ring.get({ plain: true }));
@@ -44,9 +42,7 @@ router.get('/', withAuth, (req, res) => {
 router.get('/edit/:id', withAuth, (req, res) => {
   Ring.findByPk(req.params.id, {
     attributes: [
-      'id',
-      [sequelize.literal('(SELECT METAL(*) FROM band WHERE ring.id = band.ring_id)'),
-      ('(SELECT TYPE(*) FROM stone WHERE ring.id = stone.ring_id)')]
+      'id'
     ],
     include: [
       {
