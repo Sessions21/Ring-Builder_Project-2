@@ -3,13 +3,17 @@ async function ringCreatorHandler(event) {
   
     const band = document.querySelector('#band-selection').value.trim();
     const stone = document.querySelector('#stone-selection').value.trim();
+    const size = document.querySelector('#ring-size').value.trim();
+    const stone = document.querySelector('#ring-title').value.trim();
   
     if (band && stone) {
       const response = await fetch(`/api/rings`, {
         method: 'post',
         body: JSON.stringify({
           band,
-          stone
+          stone,
+          title,
+          size
         }),
         headers: { 'Content-Type': 'application/json' }
       });
