@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'El Messiri', sans-serif;
+  list-style: none;
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  color: white;
+  transition: 0.4s;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  justify-content: left;
+}
+
+.logo-icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  color: white;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: inline;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav a {
+  color: white;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.nav h3 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#logout {
+  font-size: 20px;
+}
+
+.button-logout {
+  border-color: white;
+  background-color: grey;
+  font-size: .8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding-top: 1px;
+  border-radius: 2px;
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+}
+
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.70;
+}
+
+.title-menu {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  flex-direction: column;
+  padding-top: 40px;
+  margin-top: 5px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+}
+
+.page-title {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 30px;
+}
+
+
+.wrapper {
+  width: 80%;
+}
+
+.menu {
+  width: 100%;
+  height: 60px;
+}
+
+.menu ul {
+  width: 100%;
+  height: 100%;
+  background: rgb(58, 65, 85);
+  text-align: center;
+  position: relative;
+  line-height: 60px;
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+}
+
+.menu ul li {
+  display: inline-block;
+  margin: 0 85px;
+  padding: 0 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 25px;
+  display: block;
+}
+
+.menu ul li .sub-menu {
+  position: absolute;
+  background-color: grey;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  box-shadow:  -5px 5px 7px rgba(0,0,0,0.7);
+  top: 60px;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 24px;
+  visibility: hidden;
+}
+
+.menu ul li:hover {
+  transition: .8s;
+  background: white
+}
+
+.menu ul li:hover a {
+  transition: .8s;
+  color: rgb(65, 65, 65)
+}
+
+.menu ul li:hover .sub-menu {
+  visibility: visible;
+}
+
+.menu ul li .sub-menu .col img {
+  width: 250px;
+  height: 180px;
+  box-shadow:  -5px 5px 7px rgba(0,0,0,0.7);
+  display: block;
+  margin-left: 90px;
+}
+
+.menu ul li .sub-menu p {
+  color: white;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.button {
+  background-color: rgba(58, 65, 85);
+  border-color: white;
+  font-size: 2em;
+  padding-top:2px;
+  border-radius: 2px;
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+  position: absolute;
+  bottom: 70px;
+}
+
+.button:hover {
+  background-color: grey;
+  border-color: white;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 35px
+}
+
+.social li {
+  list-style: none;
+  font-size: 15px;
+}
+
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.social li a:hover {
+  transform: scale(1.15)
+}
+
+@media(max-width: 768px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+  .logo {
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+
+  .nav a {
+    color: white;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 15px;
+  }
+}
