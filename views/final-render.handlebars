@@ -1,14 +1,22 @@
 <div id="ring-order-form">
   <h1>{{title}} Designed by {{username}} </h1>
   {{! Insert image of final ring here }}
-  <ul>
-    <li>
-      Stone: {{stone}}
-      Band: {{band}}
-      Size: {{size}}
-      <h2>Contact Info</h2>
-      Email: {{email}}
-      Phone: {{phone}}
-    </li>
-  </ul>
+  <div>
+    <ul id="pring-slip">
+      <li>
+        Stone:
+        {{stone}}
+        Band:
+        {{band}}
+        Size:
+        {{size}}
+        <h2>Contact Info</h2>
+        Email:
+        {{email}}
+        Phone:
+        {{phone}}
+      </li>
+    </ul>
+    <button onclick="window.print()">Print Ring Details</button>
+  </div>
 </div>
