@@ -1,12 +1,23 @@
 <div id="ring-order-form">
-<h1>{{title}} Designed by {{username}} </h1>
-{{!-- Insert image of final ring here --}}
-<li>
-    {{stone}}
-    {{band}}
-    {{size}}
-    {{email}}
-    {{phone}}
-</li>
-
+  <h1>{{title}} Designed by {{username}} </h1>
+  {{! Insert image of final ring here }}
+  <div>
+    <ul id="print-slip">
+      <li>
+        Stone:
+        {{stone}}
+        Band:
+        {{band}}
+        Size:
+        {{size}}
+        <h2>Contact Info</h2>
+        Email:
+        {{email}}
+        Phone:
+        {{phone}}
+      </li>
+    </ul>
+    <button class ="button" onclick="window.print()">Print Ring Details</button>
+  </div>
+  <script>src="/javascript/ring-creator.js"</script>
 </div>
