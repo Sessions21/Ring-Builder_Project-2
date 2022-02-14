@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/build/');
+        document.location.replace('/build');
       } else {
         alert(response.statusText);
       }
