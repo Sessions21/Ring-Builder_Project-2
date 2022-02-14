@@ -256,6 +256,15 @@
   transform: scale(1.15)
 }
 
+.button {
+  background-color: grey;
+  border-color: white;
+  margin-top: 10px;
+  font-size: 1.7em;
+  border-radius: 2px;
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+}
+
 @media(max-width: 768px) {
   .showcase,
   .showcase header {
