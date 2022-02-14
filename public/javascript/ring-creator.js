@@ -4,7 +4,7 @@ async function ringCreatorHandler(event) {
     const band = document.querySelector('#band-selection').value.trim();
     const stone = document.querySelector('#stone-selection').value.trim();
     const size = document.querySelector('#ring-size').value.trim();
-    const stone = document.querySelector('#ring-title').value.trim();
+    const title = document.querySelector('#ring-title').value.trim();
   
     if (band && stone) {
       const response = await fetch(`/api/rings`, {
@@ -19,7 +19,7 @@ async function ringCreatorHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('/ring');
       } else {
         alert(response.statusText);
       }

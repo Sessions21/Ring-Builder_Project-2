@@ -14,7 +14,7 @@
 <ol class="ring-list">
   {{#each rings as |Ring|}}
   <li>
-    {{>ringCreator}}
+    {{ring-creator}}
   </li>
   <div>
     <ul id="print-slip">
@@ -34,6 +34,6 @@
     </ul>
     <button class ="button" onclick="window.print()">Print Ring Details</button>
   </div>
-  <script>src="/public/javascript/ring-creator.js"</script>
+  <script>src="/javascript/ring-creator.js"</script>
   <script src="/models/Ring.js"></script>
 </div>

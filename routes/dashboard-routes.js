@@ -31,7 +31,7 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbRingData => {
       const rings = dbRingData.map(ring => ring.get({ plain: true }));
-      res.render('/dashboard', { rings, loggedIn: true });
+      res.render('/buildS', { rings, loggedIn: true });
     })
     .catch(err => {
       console.log(err);
