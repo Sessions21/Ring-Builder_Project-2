@@ -18,7 +18,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Page Rendering Paths
-app.get('/landing', (req, res) => res.render('start-building', { layout: 'landing'}));
+app.get('/', (req, res) => res.render('start-building', { layout: 'landing'}));
 app.get('/main', (req, res) => res.render('start-building', { style: 'style-main.css'}));
 app.get('/login', (req, res) => res.render('login', { style: 'style-login.css'}));
 app.get('/build', (req, res) => res.render('ring-creator', { layout: "ring-creator-layout",
