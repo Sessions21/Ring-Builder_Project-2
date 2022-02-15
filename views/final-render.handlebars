@@ -1,0 +1,39 @@
+<div id="ring-order-form">
+  <h1>{{title}} Designed by {{username}} </h1>
+  {{! Insert image of final ring here }}
+    <h2>Ring Image</h2> <br>
+  <div class="row">
+  {{#each image}}
+  <div class="col-md-4">
+      <div class="text-success" style="font-size: large;
+            font-weight: 700;">{{this.ring}}</div>
+         <img src="{{this.src}}">
+      </div>
+    {{/each}}
+
+<ol class="ring-list">
+  {{#each rings as |Ring|}}
+  <li>
+    {{ring-creator}}
+  </li>
+  <div>
+    <ul id="print-slip">
+      <li>
+        Stone:
+        {{stone}}
+        Band:
+        {{band}}
+        Size:
+        {{size}}
+        <h2>Contact Info</h2>
+        Email:
+        {{email}}
+        Phone:
+        {{phone}}
+      </li>
+    </ul>
+    <button class ="button" onclick="window.print()">Print Ring Details</button>
+  </div>
+  <script>src="/javascript/ring-creator.js"</script>
+  <script src="/models/Ring.js"></script>
+</div>

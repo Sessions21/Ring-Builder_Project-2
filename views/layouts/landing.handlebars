@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Ruby Jewelry - Ring Builder custom built rings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/stylesheets/style-landing.css">
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <div class="brand">
+        <a href="/landing"><img class="logo-icon" src="/images/logo.png" alt="octopus logo"></img></a>
+        <h2 class="logo"><a href="/landing" class="logo">Bella Ruby Jewelry</a></h2>
+      </div>
+      <div class="nav">
+        <h2>Menu</h2>
+        <div class="toggle"></div>
+      </div>
+    </header>
+
+    <img class="background" src="/images/ring-book.png"></img>
+
+    <div class="overlay"></div>
+
+      {{{ body }}}
+
+    <ul class="social">
+      <li><a href="https://www.facebook.com/bellarubyjewelry"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="https://www.instagram.com/bellarubyjewelry/?hl=en"><i class="fas fa-camera fa-2x"></i></a></li>
+      <li><a href="https://www.etsy.com/shop/BellaRubyJewelry"><i class="fab fa-etsy fa-2x"></i></a></li>
+      <li><a href="https://www.bellarubyjewelry.com/">bellarubyjewelry.com</a></li>
+    </ul>
+
+  </section>
+
+  <div class="menu">
+    <ul>
+      <li><a href="/login">Login/Register</a></li>
+      <li><a href="/dashboard", withAuth >Dashboard</a></li>
+      <li><a href="#">Create a Ring</a></li>
+      <li><a href="mailto:s21nichols@hotmail.com" class="">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.toggle');
+    const showcase = document.querySelector('.showcase');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      showcase.classList.toggle('active');
+    });
+  </script>
+  
+</body>
+</html>
