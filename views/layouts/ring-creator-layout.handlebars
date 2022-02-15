@@ -29,7 +29,7 @@
       </div>
       {{else}}
       <div class="nav">
-        <h2><a href="/login">Login</a></h2>
+        <h2><a href="/login">Logout</a></h2>
       </div>
       {{/if}}
     </header>
@@ -37,10 +37,6 @@
     <div class="overlay"></div>
 
     {{{ body }}};
-
-    {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}
 
     <ul class="social">
       <li><a href="https://www.facebook.com/bellarubyjewelry"><i class="fab fa-facebook-square fa-2x"></i></a></li>
@@ -50,6 +46,10 @@
       <li><a href="mailto:s21nichols@hotmail.com" class="">Contact Us</a></li>
     </ul>
   </section>
+
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
