@@ -12,8 +12,8 @@ async function ringCreatorHandler(event) {
         body: JSON.stringify({
           band,
           stone,
-          title,
-          size
+          size,
+          title
         }),
         headers: { 'Content-Type': 'application/json' }
       });
@@ -26,4 +26,6 @@ async function ringCreatorHandler(event) {
     }
   }
 
-  document.querySelector('.ring-creator-submit').addEventListener('submit', ringCreatorHandler);
+  document.querySelector('.new-ring-form').addEventListener('submit', ringCreatorHandler);
+
+
