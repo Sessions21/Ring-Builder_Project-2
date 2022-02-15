@@ -9,7 +9,7 @@
 
   ## Deployed Link
 
-  .com
+  https://ring-builder-app.herokuapp.com/
 
   ## Technologies Used
 
