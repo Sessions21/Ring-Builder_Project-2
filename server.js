@@ -28,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 // Calls route files to shorten API routes
 app.use(routes);
 
+
 // calls connection module and sets port to listening
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now connected to port ${PORT}!`));

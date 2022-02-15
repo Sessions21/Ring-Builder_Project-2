@@ -36,14 +36,7 @@ User.init(
       validate: {
         len: [4]
       }
-    },
-    phone: {
-      type: DataTypes.BIGINT,
-      allowNull: false,
-      validate: {
-        len: [10]
-      }
-  }
+    }
 },
 {
   hooks: {
@@ -62,7 +55,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User'
+    modelName: 'user'
   }
 );
 

@@ -1,30 +1,26 @@
 const sequelize = require('../config/connection')
-const { User } = require('../models');
+const { User, Ring } = require('../models');
 
 const userData = [{
         username: 'Scott',
         email: 'scott@gmail.com',
-        password: 'Nichols',
-        phone: 8012345678
+        password: 'Nichols'
 
     },
     {
         username: 'Berk',
         email: 'berk@gmail.com',
-        password: 'Forbes',
-        phone: 8019876541
+        password: 'Forbes'
     },
     {
         username: 'Lisseth',
         email: 'lisseth@gmail.com',
-        password: 'Diaz',
-        phone: 4564564567
+        password: 'Diaz'
     },
     {
         username: 'Alexandros',
         email: 'alexandros@gmail.com',
-        password: 'Vlamakis',
-        phone: 3216549874
+        password: 'Vlamakis'
     }
 
 ];

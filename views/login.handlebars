@@ -1,35 +1,38 @@
  <main class="container">
   <h1>Log In</h1>
-  <form class="login-form">
-    <fieldset>
-        <label class="form-labels" for="email-login">Email:</label>
-        <input type="text" id="email-login" placeholder="example@email.com" />
-
-        <label class="form-labels" for="password-login">Password:</label>
-        <input type="password" id="password-login" placeholder="Enter here"/><br>
-
-        <button class="button login-button" type="submit">Log In</button>
-    </fieldset>
+<form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" id="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+    <input type="password" id="password-login" />
+  </div>
+  <div>
+    <button type="submit">login</button>
+  </div>
+</form>
   </form>
   <br>
   <br>
   <h1>New to Ring Builder? Create an account</h1>
-  <form class="signup-form">
-    <fieldset class="form-fields">
-        <label for="username-signup">Username:</label>
-        <input type="text" id="username-signup" placeholder="John Smith"/>
-
-        <label for="email-signup">Email:</label>
-        <input type="text" id="email-signup" placeholder="example@email.com"/>
-
-        <label for="password-signup">Password:</label>
-        <input type="password" id="password-signup" placeholder="Must be at least 6 characters"/>
-
-        <label for="phone-signup">Phone #:</label>
-        <input type="tel" id="phone-signup" placeholder="###-###-####"/>
-
-        <button class="button signup-button" type="submit">Signup</button>
-    </fieldset>
-  </form>
+<form class="signup-form">
+  <div>
+    <label for="username-signup">username:</label>
+    <input type="text" id="username-signup" />
+  </div>
+  <div>
+    <label for="email-signup">email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <button type="submit">signup</button>
+  </div>
+</form>
   <script src="/javascript/login.js"></script>
  </main> 
