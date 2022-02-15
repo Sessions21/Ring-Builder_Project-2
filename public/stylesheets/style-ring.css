@@ -126,6 +126,10 @@
   text-shadow: -5px 5px 7px rgba(0,0,0,0.7);
 }
 
+input {
+  text-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+}
+
 .page-title {
   font-size: 45px;
   font-weight: bold;
@@ -143,9 +147,13 @@
 .col-container {
   display: flex;
   width: 100%;
-  background:rgba(58, 65, 85);
   margin-top: 15px;
   font-size: 15px;
+}
+
+.select {
+  background:rgba(58, 65, 85);
+  margin: 10px;
 }
 
 .selection-container {

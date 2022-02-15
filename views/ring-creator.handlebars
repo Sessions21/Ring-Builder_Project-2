@@ -5,22 +5,20 @@
   </div>
 
   {{!-- Form for ring title and size and any other data needed for the final render to go here --}}
-    
-
   <form class="new-ring-form">
     <div class="selection-container">
-    <div class="form-text col">
-        <label for="ring-size-input" class="form-label input">Enter Ring Size (3-12)</label>
-        <input type="number" id="ring-size-input" placeholder="Enter your ring size" name="ring-size">
-    </div>
-    <div class="form-text col">
-      <label class="form-labels" for="title">Give Your Ring A Name</label>
-      <input type="text" id="ring-title" name="ring-title" placeholder="Enter your ring's name" />
-    </div>
+      <div class="form-text col">
+        <label for="ring-size" class="form-label input">Enter Ring Size (3-12)</label>
+        <input type="number" id="ring-size" placeholder="Enter your ring size" name="ring-size">
+      </div>
+      <div class="form-text col">
+        <label class="form-labels" for="ring-title">Give Your Ring A Name</label>
+        <input type="text" id="ring-title" name="ring-title" placeholder="Enter your ring's name" />
+      </div>
     </div>
       <div class="col-container">
-        <div class="col">
-          <h1 class="selection-title">Bands</h1>
+        <div class="col select">
+          <h1>Bands</h1>
             <div>
               <img class="band-image" src="/images/gold-band.png" alt="Gold Ring Band">
               <p><span>Gold</span> - All gold bands are a pure 25 Karat.  There are a number of widths and sytles to choose from.</p>
@@ -34,8 +32,8 @@
               <p><span>Decorative</span> - There are a variety of both gold and silver decorative bands. Custom decoartion options available, as well.</p>
             </div>
         </div>
-        <div class="col">
-          <h1 class="selection-title">Stones</h1>
+        <div class="col select">
+          <h1>Stones</h1>
             <div>
               <img class="stone-image" src="/images/black-onyx.png" alt="Black Onyx Round Stone">
               <p><span>Black Onyx</span> - This dramatic black stone comes in a variety of sizes and shapes.</p>
@@ -48,17 +46,17 @@
               <img class="stone-image" src="/images/turquiose.png" alt="Turquoise Round Stone">
               <p><span>Turquoise</span> - The turquoise stone is a classic look that can be fitted into any size or shape ring.</p>
             </div>
-          </div>
+        </div>
       </div>
     <div class="selection-container">
-    <div class="col form-text">
-      <label for="band-selection">Band</label>
-      <input type="text" id="band" name="band" placeholder="ex. Gold" />
-    </div>
-    <div class="col form-text">
-      <label for="stone-selection">Stone</label>
-      <input type="text" id="stone" name="stone" placeholder="ex. Black Onyx"/>
-    </div>
+      <div class="col form-text">
+       <label for="band">Band</label>
+        <input type="text" id="band" name="band" placeholder="ex. Gold" />
+      </div>
+      <div class="col form-text">
+       <label for="stone">Stone</label>
+       <input type="text" id="stone" name="stone" placeholder="ex. Black Onyx"/>
+      </div>
     </div>
     <div>
       <button class="button" type="submit" id="create-button">Create Ring</button>

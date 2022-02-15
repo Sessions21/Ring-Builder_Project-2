@@ -7,19 +7,19 @@ async function ringCreatorHandler(event) {
     const title = document.querySelector('input[name="ring-title"]').value.trim();
       
     if (band && stone && size && title) {
-      const response = await fetch(`/api/rings`, {
+      const response = await fetch(`/build`, {
         method: 'POST',
         body: JSON.stringify({
           band,
           stone,
-          title,
-          size
+          size,
+          title
         }),
         headers: { 'Content-Type': 'application/json' }
       });
   
       if (response.ok) {
-        document.location.replace('/rings');
+        document.location.replace('/landing');
       } else {
         alert(response.statusText);
       }
