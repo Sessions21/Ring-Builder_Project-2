@@ -1,5 +1,4 @@
 const { Ring } = require('../models');
-// need to remove Image: 5 with the image links
 
 const ringData = [{
     title: 'Black Onyx Gold',
