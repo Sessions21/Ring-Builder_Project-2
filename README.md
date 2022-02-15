@@ -9,7 +9,7 @@
 
   ## Deployed Link
 
-  https://ring-builder-app.herokuapp.com/
+  https://ring-builder-app.herokuapp.com/lanind
 
   ## Technologies Used
 
