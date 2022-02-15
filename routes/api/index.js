@@ -6,7 +6,7 @@ const stoneRoutes = require('./stone-routes.js');
 const imageRoutes = require('./image-routes.js');
 const ringRoutes = require('./ring-routes.js');
 
-router.use('/users', userRoutes);
+router.use('/user', userRoutes);
 router.use('/bands', bandRoutes);
 router.use('/stones', stoneRoutes);
 router.use('/images', imageRoutes);
