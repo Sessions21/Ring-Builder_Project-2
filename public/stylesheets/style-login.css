@@ -43,12 +43,6 @@ h1 {
   justify-content: left;
 }
 
-.brand {
-  display: flex;
-  justify-content: left;
-}
-
-
 .logo-icon {
   position: relative;
   width: 70px;
