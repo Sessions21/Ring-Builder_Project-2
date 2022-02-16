@@ -3,65 +3,63 @@
     <h1 class="page-title">BUILD YOUR RING</h1>
     <h2 class="sub-title">Customize your ring with the options below</h2>
   </div>
-
   {{!-- Form for ring title and size and any other data needed for the final render to go here --}}
-  <div class="dropdown ring-size">
-    <button class="dropbtn">Ring Size</button>
-      <div class="dropdown-content" id= "size-selection">
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a href="#">7</a>
-        <a href="#">8</a>
-        <a href="#">9</a>
-        <a href="#">10</a>
-        <a href="#">11</a>
-        <a href="#">12</a>
+  <form class="new-ring-form">
+    <div class="selection-container">
+      <div class="col">
+        <label for="ring-size" class="form-text">Enter Ring Size (3-12)</label>
+        <input type="number" id="ring-size" placeholder="Enter your ring size" name="ring-size">
+      </div>
+      <div class="col">
+        <label class="form-text" for="ring-title">Give Your Ring A Name</label>
+        <input type="text" id="ring-title" name="ring-title" placeholder="Enter your ring's name" />
+      </div>
     </div>
-    <div> <label class="form-labels" for="title">Give Your Ring A Name</label>
-      <input type="text" id="ring-title" placeholder="Engagement" /></div>
-    <div>
-
-  <div class="wrapper">
-    <div class="menu">
-      <ul>
-        <li><a href="#">Bands</a>
-          <div class="sub-menu">
-            <div class="col">
+      <div class="col-container">
+        <div class="col select">
+          <h1>Bands</h1>
+            <div>
               <img class="band-image" src="/images/gold-band.png" alt="Gold Ring Band">
-              <p>All gold bands are a pure 25 Karat.  There are a number of widths and sytles to choose from.</p>
+              <p><span>Gold</span> - All gold bands are a pure 25 Karat.  There are a number of widths and sytles to choose from.</p>
             </div>
-            <div class="col">
+            <div class="">
               <img class="band-image" src="/images/silver-band.png" alt="Silver Ring Band">
-              <p>All bands are Sterling .925 silver. There are a number of widths and sytles to choose from.</p>
+              <p><span>Silver</span> - All silver bands are Sterling .925 silver. There are a number of widths and sytles to choose from.</p>
             </div>
-            <div class="col">
+            <div class="">
               <img class="band-image" src="/images/decorative-band.png" alt="Decorative Ring Band">
-              <p>There are a variety of both gold and silver decorative bands. Custom decoartion options available, as well.</p>
+              <p><span>Decorative</span> - There are a variety of both gold and silver decorative bands. Custom decoartion options available, as well.</p>
             </div>
-          </div>
-        </li>
-        <li><a href="#">Stones</a>
-          <div class="sub-menu">
-            <div class="col">
-              <img class="band-image" src="/images/black-onyx.png" alt="Black Onyx Round Stone">
-              <p>This dramatic black stone comes in a variety of sizes and shapes.</p>
+        </div>
+        <div class="col select">
+          <h1>Stones</h1>
+            <div>
+              <img class="stone-image" src="/images/black-onyx.png" alt="Black Onyx Round Stone">
+              <p><span>Black Onyx</span> - This dramatic black stone comes in a variety of sizes and shapes.</p>
             </div>
-            <div class="col">
-              <img class="band-image" src="/images/rainbow-moonstone.png" alt="Round Rainbow Moonstone">
-              <p>The Rainbow Moonstone is a whimcal stone with many healing properties.</p>
+            <div class="">
+              <img class="stone-image" src="/images/rainbow-moonstone.png" alt="Round Rainbow Moonstone">
+              <p><span>Rainbow Moonstone</span> - The Rainbow Moonstone is a whimcal stone with many healing properties.</p>
             </div>
-            <div class="col">
-              <img class="band-image" src="/images/turquiose.png" alt="Turquiose Round Stone">
-              <p>The turquiose stone is a classic look that can be fitted into any size or shape ring.</p>
+            <div class="">
+              <img class="stone-image" src="/images/turquiose.png" alt="Turquoise Round Stone">
+              <p><span>Turquoise</span> - The turquoise stone is a classic look that can be fitted into any size or shape ring.</p>
             </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
+    <div class="selection-container">
+      <div class="col">
+       <label class="form-text" for="band">Band</label>
+        <input type="text" id="band" name="band" placeholder="ex. Gold" />
+      </div>
+      <div class="col">
+       <label class="form-text"for="stone">Stone</label>
+       <input type="text" id="stone" name="stone" placeholder="ex. Black Onyx"/>
+      </div>
     </div>
     <div>
-      <button class="button" type="submit" id= "create-button">Create Ring</button>
+      <button class="button" type="submit" id="create-button">Create Ring</button>
     </div>
-  </div>
+  </form>
 </Section>
+<script src="javascript/ring-creator.js"></script>
