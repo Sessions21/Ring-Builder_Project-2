@@ -17,13 +17,6 @@ app.set('view engine', 'handlebars');
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Page Rendering Paths
-app.get('/', (req, res) => res.render('start-building', { layout: 'landing'}));
-app.get('/main', (req, res) => res.render('start-building', { style: 'style-main.css'}));
-app.get('/login', (req, res) => res.render('login', { style: 'style-login.css'}));
-app.get('/build', (req, res) => res.render('ring-creator', { layout: "ring-creator-layout",
-                                                             style: 'style-ring.css'}));
-app.get('/ring', (req, res) => res.render('final-render', { style: 'main'}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -41,6 +34,8 @@ app.use(session(sess));
 
 // Calls route files to shorten API routes
 app.use(require('./routes/'));
+// Page Rendering Paths
+
 
 // calls connection module and sets port to listening
 sequelize.sync({ force: false }).then(() => {
