@@ -60,6 +60,8 @@
   * [Email](mailto:s21nichols@hotmail.com) 
 
   ## Preview Screenshot
-  ![](public/images/.png)
+  ![Screenshot-of-website](public/images/Landing-Screenshot.png)
+  ![Screenshot-of-website](public/images/Login-Page.png)
+  ![Screenshot-of-website](public/images/build-page.png)
 
 
