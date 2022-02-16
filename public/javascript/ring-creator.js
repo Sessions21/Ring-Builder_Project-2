@@ -22,4 +22,4 @@ async function ringCreatorHandler(event) {
     }
   }
 }
-document.querySelector('.new-ring-form').addEventListener('submit', ringCreatorHandler);
+document.querySelector('#create-button').addEventListener('submit', ringCreatorHandler);
