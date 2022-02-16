@@ -3,7 +3,7 @@ const { Ring } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET /api/rings
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   Ring.findAll()
     .then(allRings => res.json(allRings))
     .catch(err => {
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/rings/:
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
   Ring.findOne({
     where: {
       id: req.params.id
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/rings
-router.post('/add', (req, res) => {
+router.post('/add', withAuth, (req, res) => {
   Ring.create({
     user_id: req.body.user_id,
     size: req.body.size,
@@ -49,7 +49,7 @@ router.post('/add', (req, res) => {
 });
 
 // PUT /api/rings/:
-router.put('/add/:id', (req, res) => {
+router.put('/add/:id', withAuth, (req, res) => {
   Ring.update(req.body, {
     where: {
       user_id: req.body.user_id,
@@ -68,7 +68,7 @@ router.put('/add/:id', (req, res) => {
 });
 
 // DELETE /api/rings/:
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Ring.destroy({
     where: {
       id: req.params.id
