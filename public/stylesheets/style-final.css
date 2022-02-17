@@ -73,9 +73,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  list-style-type: none;
 }
 
 .row img {
+  height: 300px;
   border: solid 2px rgb(36, 51, 92);
   box-shadow: -5px 5px 7px rgba(0,0,0,0.7);
 }

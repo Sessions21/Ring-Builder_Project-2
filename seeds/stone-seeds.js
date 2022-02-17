@@ -7,7 +7,7 @@ const stoneData = [{
         type: 'Rainbow Moonstone'
     },
     {
-        type: 'Turqoise'
+        type: 'Turquoise'
     }
 ];
 

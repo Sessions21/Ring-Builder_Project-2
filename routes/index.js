@@ -9,7 +9,7 @@ router.use('/api', apiRoutes);
 
 //page rendering
 router.get('/', (req, res) => res.render('start-building', { layout: 'landing'}));
-router.get('/main', (req, res) => res.render('start-building', { style: 'style-main.css'}));
+// router.get('/main', (req, res) => res.render('start-building', { style: 'style-main.css'}));
 router.get('/login', (req, res) => res.render('login', { style: 'style-login.css'}));
 router.get('/build', (req, res) => res.render('ring-creator', { layout: "ring-creator-layout",
                                                              style: 'style-ring.css'}));
@@ -32,7 +32,7 @@ router.get('/ring/:id', (req, res) => {
         .then(function(ringImage){
             const rings = ringImage.map(ring => ring.get({ plain: true }));
             console.log(rings)
-            res.render('final-render', {rings, style: 'style-final-css'})
+            res.render('final-render-page', {rings, layout: 'final-render-layout', style: 'style-final.css'})
     })
 } );
 

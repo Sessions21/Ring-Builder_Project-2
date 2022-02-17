@@ -1,0 +1,82 @@
+  <header class="header">
+    <div class="brand">
+      <img class="logo-icon" src="/images/bella-ruby-logo.png" alt="octopus logo"></img>
+      <h2><a class='logo' href="/">Bella Ruby Jewelry</a></h2>
+    </div>
+
+    <div class="nav">
+      <span id="spanDate"></span>
+    </div>
+  </header>
+    
+  <div class="title-section">
+    <h1 class="title">First Ring</h1> 
+    <h3>Designed by John Doe</h3>
+  </div>
+  <div id="ring-order-form">
+    
+  {{!-- <div class="row">
+    {{#each image}}
+      <div class="col-md-3">
+        <div
+          class="text-success"
+          style="font-size: large;
+            font-weight: 700;">
+            {{this.ring}}
+        </div>
+        <img src="{{ this.src }}"/>
+      </div>
+      {{/each}}
+    </div> --}}
+      <ol class="ring-list">
+        {{#each rings as |Ring|}}
+          <div class="row">
+            <li>
+              <img src={{image}} alt="designer ring">
+            </li>
+          </div>
+        {{/each}}
+        <div>
+          <section class="ring-specs">
+            <h3 class="spec-title">Ring Specifictions:</h3>
+            <ul id="print-slip" class="spec-list">
+              <li>
+                Stone: {{dataValues.stone_id}}
+              </li>
+              <li>
+                Band: {{dataValues.band_id}}
+              </li>
+              <li>
+                Size: {{size}}
+              </li>
+              <li>
+                <h4>Customer Contact Info</h4>
+              </li>
+              <li>
+                Email: {{email}}
+                <br>
+                Phone: {{phone}}
+              </li>
+            </ul>
+          </section>
+          <div class="button-div">
+            <button class="button button-style" onclick="window.print()">Print Ring Details</button>
+          </div>
+        </div>
+        <script src="/javascript/ring-creator.js"></script>
+      </ol>
+    </div>
+    <ul class="social">
+      <li><a href="https://www.facebook.com/bellarubyjewelry"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="https://www.instagram.com/bellarubyjewelry/?hl=en"><i class="fas fa-camera fa-2x"></i></a></li>
+      <li><a href="https://www.etsy.com/shop/BellaRubyJewelry"><i class="fab fa-etsy fa-2x"></i></a></li>
+      <li><a href="https://www.bellarubyjewelry.com/">bellarubyjewelry.com</a></li>
+    </ul>
+
+  <script type="text/javascript">
+    var months = ['January','February','March','April','May','June','July',
+    'August','September','October','November','December'];       
+    var tomorrow = new Date();
+    tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));       
+    document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
+  </script>
