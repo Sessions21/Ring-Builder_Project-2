@@ -6,6 +6,8 @@ const Images = require('../models/Image')
 const apiRoutes = require('./api/');
 
 router.use('/api', apiRoutes);
+
+//page rendering
 router.get('/', (req, res) => res.render('start-building', { layout: 'landing'}));
 router.get('/main', (req, res) => res.render('start-building', { style: 'style-main.css'}));
 router.get('/login', (req, res) => res.render('login', { style: 'style-login.css'}));
@@ -30,7 +32,7 @@ router.get('/ring/:id', (req, res) => {
         .then(function(ringImage){
             const rings = ringImage.map(ring => ring.get({ plain: true }));
             console.log(rings)
-            res.render('final-render', {rings})
+            res.render('final-render', {rings, style: 'style-final-css'})
     })
 } );
 

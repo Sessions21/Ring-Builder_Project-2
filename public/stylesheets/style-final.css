@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'El Messiri', sans-serif;
+}
+
+/* logo and date styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  color: black;
+  margin: 10px;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+/* Ring Title and designer style */
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 45px;
+  text-decoration: underline;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title-section h3 {
+  font-size: 30px;
+}
+
+/* image styling */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row img {
+  border: solid 2px rgb(36, 51, 92);
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.7);
+}
+
+/*Ring Specs styling*/
+.ring-specs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spec-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.spec-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spec-list h4 {
+  margin-left: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.spec-list li {
+  font-size: 20px;
+}
+
+.button-style {
+  background-color: grey;
+  border: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+/* footer section */
+.social {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  bottom: 20px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  margin-right: 20px;
+  transition: 0.5s;
+  color: black;
+  font-size: 20px;
+}
+
+.social li a:hover {
+  transform: scale(1.15)
+}
