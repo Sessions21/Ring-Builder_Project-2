@@ -63,5 +63,6 @@
   ![Screenshot-of-website](public/images/Landing-Screenshot.png)
   ![Screenshot-of-website](public/images/Login-Page.png)
   ![Screenshot-of-website](public/images/build-page.png)
+  ![Screenshot-of-website](public/images/final-ring-page.png)
 
 
