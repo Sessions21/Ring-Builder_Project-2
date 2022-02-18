@@ -6,7 +6,6 @@ const session = require('express-session');
 const path = require('path');
 const res = require('express/lib/response');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const bodyParser = require('body-parser')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -20,7 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 const sess = {
