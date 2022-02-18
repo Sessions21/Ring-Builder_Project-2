@@ -35,6 +35,9 @@ router.get('/ring/:id', (req, res) => {
             console.log(rings)
             res.render('final-render-page', {rings, layout: 'final-render-layout', style: 'style-final.css'})
     })
+    .catch(function(err) {
+        console.log(err)
+    })
 } );
 
     
