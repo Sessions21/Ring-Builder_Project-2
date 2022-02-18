@@ -15,8 +15,9 @@ router.get('/build', (req, res) => res.render('ring-creator', { layout: "ring-cr
                                                              style: 'style-ring.css'}));
 router.get('/ring/:id', (req, res) => {
     Ring.findByPk(req.params.id)
-    .then(function({dataValues}){
-        return dataValues
+    .then(function(dbResponses){
+        console.log(dbResponses)
+        return dbResponses
     })
     .then(function(ringData){
         console.log(ringData)
